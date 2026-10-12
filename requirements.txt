@@ -1,0 +1,28 @@
+# Core stack. Install torch first, matched to your CUDA version, from
+# https://pytorch.org/get-started/locally/ if the plain wheel below is wrong
+# for your machine.
+torch>=2.4.0
+transformers>=4.46.0
+tokenizers>=0.20.0
+accelerate>=1.0.0
+datasets>=3.0.0
+safetensors>=0.4.5
+huggingface-hub>=0.26.0
+
+# Alignment baselines (LoRA and the SFT trainer used by the intervention test).
+peft>=0.13.0
+trl>=0.12.0
+
+# Numerics, config, reporting.
+numpy>=1.26.0
+scipy>=1.13.0
+pandas>=2.2.0
+scikit-learn>=1.5.0
+pyyaml>=6.0.1
+tqdm>=4.66.0
+matplotlib>=3.9.0
+
+# Optional but strongly recommended once you move past the smoke test:
+#   lm-eval>=0.4.5         standardized capability harness
+#   sae-lens>=5.0.0        sparse autoencoder loading for the monosemanticity ablation
+#   wandb>=0.18.0          run tracking
